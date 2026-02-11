@@ -1,0 +1,69 @@
+.home-container {
+  min-height: 100vh;
+  background: #fff;
+}
+
+.home-header {
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-header h1 {
+  color: #000;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.logout-btn {
+  padding: 0.5rem 1rem;
+  background: white;
+  color: #333;
+  border: 1px solid #ddd;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.logout-btn:hover {
+  background: #f5f5f5;
+}
+
+.home-main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.welcome-section {
+  margin-bottom: 2rem;
+}
+
+.welcome-section h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-section p {
+  color: #666;
+  font-size: 1rem;
+}
+
+.create-document-btn {
+  padding: 0.7rem 2rem;
+  background: #000;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.create-document-btn:hover {
+  background: #333;
+}

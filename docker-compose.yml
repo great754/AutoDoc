@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  # backend:
+  #   build: ./backend
+  #   container_name: autodoc-backend
+  #   env_file:
+  #     - ./backend/.env
+  #   ports:
+  #     - "8000:8000"
+  #   depends_on:
+  #     - db
+
+  db:
+    image: mysql:8.0
+    container_name: autodoc-db
+    restart: always
+    environment:
+      MYSQL_DATABASE: autodoc
+      MYSQL_USER: autodoc_user
+      MYSQL_PASSWORD: autodoc_pass
+      MYSQL_ROOT_PASSWORD: rootpassword
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
