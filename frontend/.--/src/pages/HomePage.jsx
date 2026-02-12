@@ -1,12 +1,12 @@
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import '../styles/HomePage.css';
+import logo from '../assets/image.png';
 
 function HomePage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Check if user is logged in
     const user = localStorage.getItem('user');
     if (!user) {
       navigate('/');
@@ -25,7 +25,7 @@ function HomePage() {
   return (
     <div className="home-container">
       <header className="home-header">
-        <h1>Auto-Document</h1>
+        <img src={logo} alt="Logo" className="home-logo" />
         <button className="logout-btn" onClick={handleLogout}>
           Logout
         </button>

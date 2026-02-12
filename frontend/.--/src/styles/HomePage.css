@@ -8,14 +8,20 @@
   padding: 1.5rem 2rem;
   border-bottom: 1px solid #ddd;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .home-header h1 {
-  color: #000;
+  color: #E41D38;
   margin: 0;
   font-size: 1.5rem;
+}
+
+.home-logo {
+  height: 80px;
+  width: auto;
 }
 
 .logout-btn {
@@ -26,6 +32,8 @@
   font-weight: 500;
   cursor: pointer;
   font-size: 0.9rem;
+  position: absolute;
+  right: 2rem;
 }
 
 .logout-btn:hover {
@@ -56,7 +64,7 @@
 
 .create-document-btn {
   padding: 0.7rem 2rem;
-  background: #000;
+  background: #E41D38;
   color: white;
   border: none;
   font-size: 1rem;

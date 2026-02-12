@@ -13,7 +13,7 @@
 }
 
 .create-document-header h1 {
-  color: #000;
+  color: #E41D38;
   margin: 0;
   font-size: 1.5rem;
 }
@@ -118,13 +118,13 @@
 }
 
 .submit-btn {
-  background: #000;
+  background: #E41D38;
   color: white;
   border: none;
 }
 
 .submit-btn:hover:not(:disabled) {
-  background: #333;
+  background: #c41830;
 }
 
 .cancel-btn:disabled,
