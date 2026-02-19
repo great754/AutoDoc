@@ -12,7 +12,6 @@ An automated assistant that converts RPA processes into clear, standardized tech
 - [Environment Variables](#environment-variables)
 - [Running the Project](#running-the-project)
 - [API Documentation](#api-documentation)
-- [Development](#development)
 - [Contributing](#contributing)
 - [License](#license)
 
