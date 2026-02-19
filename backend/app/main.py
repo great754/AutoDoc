@@ -6,13 +6,14 @@ app = FastAPI(title="AutoDoc API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5174", 'http://localhost:5173'],
+    allow_origins=["http://localhost:5174", "http://localhost:5173"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 app.include_router(auth.router)
+
 
 @app.get("/")
 def health_check():

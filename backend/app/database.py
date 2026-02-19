@@ -40,8 +40,7 @@ if not DATABASE_URL:
         )
 
     DATABASE_URL = (
-        f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@"
-        f"{DB_HOST}:{DB_PORT}/{DB_NAME}"
+        f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@" f"{DB_HOST}:{DB_PORT}/{DB_NAME}"
     )
 
 engine = create_engine(DATABASE_URL, pool_pre_ping=True)
