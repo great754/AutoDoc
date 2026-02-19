@@ -45,9 +45,9 @@ function LoginPage() {
       <div className="login-card">
         <h1>Auto-Document</h1>
         <h2>Login</h2>
-        
+
         {error && <div className="error-message">{error}</div>}
-        
+
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="username">Username</label>
