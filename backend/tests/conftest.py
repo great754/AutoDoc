@@ -1,6 +1,3 @@
-from app.database import Base
-from app.main import app
-from app.routers import auth
 import os
 import sys
 from pathlib import Path
@@ -18,6 +15,10 @@ if str(BACKEND_ROOT) not in sys.path:
 
 # During tests, we don't need environment variables
 os.environ.setdefault("DATABASE_URL", "sqlite+pysqlite://")
+
+from app.database import Base  # noqa: E402
+from app.main import app  # noqa: E402
+from app.routers import auth  # noqa: E402
 
 
 engine = create_engine(
