@@ -24,6 +24,8 @@ def test_register_success(client):
 
 
 def test_login_success(client):
+
+    # setup
     register_payload = {
         "username": "great754",
         "full_name": "Great Abhieyighan",
@@ -32,9 +34,11 @@ def test_login_success(client):
     }
     client.post("/auth/register", json=register_payload)
 
+    # action
     login_payload = {"username": "great754", "password": "pass123"}
     response = client.post("/auth/login", json=login_payload)
 
+    # assert
     assert response.status_code == 200
     data = response.json()
     assert data["message"] == "Login successful"
