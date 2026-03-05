@@ -250,14 +250,28 @@ Once the backend is running, access the automatically generated API documentatio
 ### Running Tests
 
 ```bash
-# Backend tests (when implemented)
+# Backend unit tests (default - fast, no external dependencies)
 cd backend
-pytest
+pytest                    # Runs unit tests by default
+# or explicitly
+pytest -m unit
+
+# Backend integration tests (requires MySQL via Docker)
+cd backend
+./scripts/run_integration_tests.sh    # Recommended: starts Docker + runs tests
+# or explicitly with marker
+pytest -m integration
 
 # Frontend tests (when implemented)
 cd frontend
 npm test
 ```
+
+**Critical:**
+- By default, `pytest` runs **unit tests only** (SQLite, no Docker needed)
+- Integration tests **must** use the script or `-m integration` marker
+- **Never** run both test types together - they use incompatible database configs
+- The shell script automatically starts MySQL and runs integration tests safely
 
 ### Code Linting
 

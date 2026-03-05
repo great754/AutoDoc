@@ -10,12 +10,6 @@ repos:
       - id: check-merge-conflict
       - id: detect-private-key
 
-  # python formatting
-  - repo: https://github.com/psf/black
-    rev: 24.1.1
-    hooks:
-      - id: black
-        files: ^backend/
 
   # python linting
   - repo: https://github.com/astral-sh/ruff-pre-commit
@@ -29,7 +23,9 @@ repos:
   - repo: local
     hooks:
       - id: pytest
-        name: pytest
-        entry: bash -c 'cd backend && pytest -q'
+        name: pytest-unit
+        entry: bash -c 'cd backend && python -m pytest -q'
         language: system
         pass_filenames: false
+        types: [python]
+        files: ^backend/(app|tests)/

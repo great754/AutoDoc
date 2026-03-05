@@ -61,3 +61,9 @@ def login(credentials: UserLogin, db: Session = Depends(get_db)):
         )
 
     return {"message": "Login successful", "user_id": user.id}
+
+
+@router.get("/all")
+def get_all_users(db: Session = Depends(get_db)):
+    users = db.query(User).all()
+    return users
