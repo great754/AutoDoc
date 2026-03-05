@@ -40,6 +40,26 @@
   border: 1px solid #ddd;
 }
 
+.error-message {
+  background-color: #ffebee;
+  border: 1px solid #ef5350;
+  color: #c41830;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.success-message {
+  background-color: #e8f5e9;
+  border: 1px solid #66bb6a;
+  color: #2e7d32;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
 .form-group {
   margin-bottom: 1.5rem;
 }
@@ -65,6 +85,23 @@
   font-size: 0.95rem;
   font-family: inherit;
   box-sizing: border-box;
+}
+
+.form-group input[type="text"] {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.helper-text {
+  display: block;
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: normal;
+  margin-top: 0.3rem;
 }
 
 .form-group textarea {

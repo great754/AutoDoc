@@ -41,7 +41,7 @@
 }
 
 .home-main {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 3rem 2rem;
   text-align: center;
@@ -74,4 +74,117 @@
 
 .create-document-btn:hover {
   background: #333;
+}
+/* Previous Projects Section */
+.previous-projects-section {
+  margin-top: 4rem;
+  text-align: left;
+}
+
+.previous-projects-section h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #E41D38;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.project-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.project-card:hover {
+  border-color: #E41D38;
+  box-shadow: 0 4px 12px rgba(228, 29, 56, 0.15);
+  transform: translateY(-2px);
+}
+
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.project-card h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  flex: 1;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-processing {
+  background-color: #cfe2ff;
+  color: #084298;
+}
+
+.status-processed {
+  background-color: #d1e7dd;
+  color: #0f5132;
+}
+
+.status-error {
+  background-color: #f8d7da;
+  color: #842029;
+}
+
+.project-purpose {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.project-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.project-date {
+  color: #999;
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }
